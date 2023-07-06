@@ -4,17 +4,16 @@ import cors from 'cors';
 import helmet from 'helmet';
 import hpp from 'hpp';
 import compression from 'compression';
-import 'express-async-errors';
 import cookieSession from 'cookie-session';
-import { config } from './config';
+import HTTP_STATUS from 'http-status-codes';
 import { Server } from 'socket.io';
 import { createClient } from 'redis';
 import { createAdapter } from '@socket.io/redis-adapter';
 import Logger from 'bunyan';
-// import cookierSession from 'cookie-session';
-import HTTP_STATUS from 'http-status-codes';
-import applicationRoutes from './routes';
-import { CustomError, IErrorResponse } from './shared/globals/helpers/error-handlers';
+import { config } from '@root/config';
+import applicationRoutes from '@root/routes';
+import { CustomError, IErrorResponse } from '@global/helpers/error-handler';
+import 'express-async-errors';
 
 const SERVER_PORT = 5000;
 const log: Logger = config.createLogger('server');
@@ -110,5 +109,8 @@ export class ChattyServer {
     });
   }
 
-  private socketIOConnections(io: Server): void {};
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private socketIOConnections(io: Server): void {
+    log.info('socketIOConnections');
+  }
 }
