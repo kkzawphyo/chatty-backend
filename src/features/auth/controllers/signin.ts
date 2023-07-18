@@ -9,6 +9,8 @@ import { IAuthDocument } from '@auth/interfaces/auth.interface';
 import { BadRequestError } from '@global/helpers/error-handler';
 import { userService } from '@service/db/user.service';
 import { IUserDocument } from '@user/interfaces/user.interface';
+// import { forgotPasswordTemplate } from '@service/emails/templates/forgot-password/forgot-password-template';
+// import { emailQueue } from '@service/queues/email.queue';
 
 export class SignIn {
   @joiValidation(loginSchema)
@@ -34,7 +36,7 @@ export class SignIn {
       },
       config.JWT_TOKEN!
     );
-    req.session = { jwt: userJwt };
+
     const userDocument: IUserDocument = {
       ...user,
       authId: existingUser!._id,
@@ -44,6 +46,11 @@ export class SignIn {
       uId: existingUser!.uId,
       createdAt: existingUser!.createdAt
     } as IUserDocument;
+
+    // const resetLink = `${config.CLIENT_URL}/reset-password?token=12374838282839497`;
+    // const template:string = forgotPasswordTemplate.passwordResetTemplate(existingUser.username!,resetLink);
+    // emailQueue.addEmailJob('forgotPasswordEmail',{template,receiverEmail:'alexa.will@ethereal.email',subject:'Reset your password'});
+    req.session = { jwt: userJwt };
     res.status(HTTP_STATUS.OK).json({ message: 'User login successfully', user: userDocument, token: userJwt });
   }
 }
