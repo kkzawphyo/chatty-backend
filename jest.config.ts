@@ -24,8 +24,10 @@ const config: Config.InitialOptions = {
   moduleNameMapper:{
     '@auth/(.*)':['<rootDir>/src/features/auth/$1'],
     '@user/(.*)':['<rootDir>/src/features/user/$1'],
+    '@post/(.*)':['<rootDir>/src/features/post/$1'],
     '@global/(.*)':['<rootDir>/src/shared/globals/$1'],
     '@service/(.*)':['<rootDir>/src/shared/services/$1'],
+    '@image/(.*)':['<rootDir>/src/features/images/$1'],
     '@socket/(.*)':['<rootDir>/src/shared/sockets/$1'],
     '@worker/(.*)':['<rootDir>/src/shared/workers/$1'],
     '@root/(.*)':['<rootDir>/src/$1'],

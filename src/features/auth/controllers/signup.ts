@@ -2,7 +2,7 @@ import HTTP_STATUS from 'http-status-codes';
 import { ObjectId } from 'mongodb';
 import { Request, Response } from 'express';
 import { joiValidation } from '@global/decorators/joi-validation.decorators';
-import { signupSchema } from '@auth/schemes/singup';
+import { signupSchema } from '@auth/schemes/signup';
 import { BadRequestError } from '@global/helpers/error-handler';
 import { authService } from '@service/db/auth.service';
 import { IAuthDocument, ISignUpData } from '@auth/interfaces/auth.interface';

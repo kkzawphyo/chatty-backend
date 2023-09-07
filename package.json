@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./build/app.js",
+    "start": "nodemon ./build/src/app.js | ./node_modules/.bin/bunyan",
     "dev": "nodemon -r tsconfig-paths/register src/app.ts || ./node_modules/.bin/bunyan",
     "lint:check": "eslint \"src/**/*.ts\"",
     "lint:fix": "eslint \"src/**/*.ts\" --fix",
@@ -61,6 +61,7 @@
     "@types/jsonwebtoken": "^9.0.2",
     "@types/lodash": "^4.14.195",
     "@types/nodemailer": "^6.4.8",
+    "@types/redis-info": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",
     "eslint": "^8.41.0",
