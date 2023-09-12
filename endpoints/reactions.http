@@ -1,0 +1,31 @@
+@baseUrl = http://127.0.0.1:6000
+@urlPath = api/v1
+
+###
+GET {{baseUrl}}/{{urlPath}}/post/reactions/64f956b60c6a83b387997c84
+Content-Type: application/json
+Accept: application/json
+withCredentials:true
+
+###
+POST {{baseUrl}}/{{urlPath}}/post/reaction
+Content-Type: application/json
+Accept: application/json
+withCredentials:true
+
+{
+  "userTo": "64f6b8250f6f73f6ac7d61c3",
+  "postId": "64f956b60c6a83b387997c84",
+  "type": "love",
+  "previousReaction": "",
+  "postReactions":{"like":0,"love":1,"happy":0,"sad":0,"wow":0,"angry":0},
+  "profilePicture": "https://res.cloudinary.com/dimejr2e8/image/upload/v1693890598/64f6b8250f6f73f6ac7d61c3"
+}
+
+###
+DELETE {{baseUrl}}/{{urlPath}}/post/reaction/64f956b60c6a83b387997c84/sad/{"like":0,"love":0,"happy":0,"sad":0,"wow":0,"angry":0}
+Content-Type: application/json
+Accept: application/json
+withCredentials:true
+
+{}
