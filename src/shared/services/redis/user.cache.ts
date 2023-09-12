@@ -3,7 +3,7 @@ import { BaseCache } from '@service/redis/base.cache';
 import { IUserDocument } from '@user/interfaces/user.interface';
 import Logger from 'bunyan';
 import { ServerError } from '@global/helpers/error-handler';
-import { Helpers } from '@global/helpers/helper';
+import { Helpers } from '@global/helpers/helpers';
 
 const log: Logger = config.createLogger('redisConnection');
 export class UserCache extends BaseCache {
