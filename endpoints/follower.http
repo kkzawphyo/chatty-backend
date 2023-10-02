@@ -1,0 +1,46 @@
+@baseUrl = http://127.0.0.1:5000
+@urlPath = api/v1
+
+###
+GET {{baseUrl}}/{{urlPath}}/user/following
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+GET {{baseUrl}}/{{urlPath}}/user/followers/65112068d8e7c6462cbb6cdb
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+PUT {{baseUrl}}/{{urlPath}}/user/follow/65112098d8e7c6462cbb6ce9
+Content-Type: application/json
+Accept: application/json
+withCredentials:true
+
+{}
+
+###
+PUT {{baseUrl}}/{{urlPath}}/user/unfollow/64fabc02961658669b29be69/64f6b8250f6f73f6ac7d61c3
+Content-Type: application/json
+Accept: application/json
+withCredentials:true
+
+{}
+
+###
+PUT {{baseUrl}}/{{urlPath}}/user/block/64fabc02961658669b29be69
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{}
+
+###
+PUT {{baseUrl}}/{{urlPath}}/user/unblock/64fabc02961658669b29be69
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{}

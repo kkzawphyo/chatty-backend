@@ -1,0 +1,20 @@
+@baseUrl = http://127.0.0.1:5000
+@urlPath = api/v1
+
+###
+GET {{baseUrl}}/health
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+GET {{baseUrl}}/env
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+GET {{baseUrl}}/fibo/5
+Content-Type: application/json
+Accept: application/json
+withCredentials: true

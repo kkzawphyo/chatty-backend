@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "ignoreDeprecations": "5.0",
       "target": "es2016",
       "module": "commonjs",
       "lib": ["DOM","ES2016"],
@@ -33,6 +34,10 @@
         "@socket/*":["src/shared/sockets/*"],
         "@worker/*":["src/shared/workers/*"],
         "@reaction/*":["src/features/reactions/*"],
+        "@comment/*":["src/features/comments/*"],
+        "@notification/*":["src/features/notifications/*"],
+        "@chat/*":["src/features/chat/*"],
+        "@follower/*":["src/features/followers/*"],
         "@root/*":["src/*"],
       }
   }
