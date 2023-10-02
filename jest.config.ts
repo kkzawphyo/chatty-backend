@@ -34,6 +34,7 @@ const config: Config.InitialOptions = {
     '@comment/(.*)':['<rootDir>/src/features/comments/$1'],
     '@follower/(.*)':['<rootDir>/src/features/followers/$1'],
     '@notification/(.*)':['<rootDir>/src/features/notifications/$1'],
+    '@chat/(.*)':['<rootDir>/src/features/chat/$1'],
     '@root/(.*)':['<rootDir>/src/$1'],
   }
 };

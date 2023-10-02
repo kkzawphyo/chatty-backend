@@ -1,4 +1,4 @@
-@baseUrl = http://127.0.0.1:6000
+@baseUrl = http://127.0.0.1:5000
 @urlPath = api/v1
 
 ###
@@ -39,7 +39,7 @@ Accept: application/json
 withCredentials :true
 
 {
-  "post":"this is post 2",
+  "post":"this is post 1 by pyaepyae",
   "bgColor":"white",
   "privacy":"private",
   "gifUrl":"",
@@ -54,7 +54,7 @@ Accept: application/json
 withCredentials: true
 
 {
-  "post": "post with image",
+  "post": "post with image by pyaepyae",
   "bgColor": "imagebg",
   "privacy": "public",
   "gifUrl": "url",
