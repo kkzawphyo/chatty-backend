@@ -4,13 +4,13 @@ A RESTful + Realtime API for a social chat application that supports posts, comm
 Built with TypeScript and fully tested using Jest.
 
 🚀 Features
-🔐 User authentication & authorization (JWT)
-📝 Create & manage posts
-💬 Real-time chat (WebSocket / Socket.IO)
-❤️ Like & comment on posts
-🔔 Real-time notifications
-🧪 Unit testing with Jest
-📦 Clean architecture with TypeScript
+※ User authentication & authorization (JWT)
+※ Create & manage posts
+※ Real-time chat (WebSocket / Socket.IO)
+※ Like & comment on posts
+※ Real-time notifications
+※ Unit testing with Jest
+※ Clean architecture with TypeScript
 
 🧰 Tech Stack
 Language: TypeScript
